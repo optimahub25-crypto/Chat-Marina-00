@@ -1,0 +1,144 @@
+/* ------------------------------------- */
+/* ESTILOS BASE E TEMA FUTURISTA (DARK) */
+/* ------------------------------------- */
+
+:root {
+    --bg-dark: #1e1e2c;       /* Fundo muito escuro */
+    --bg-container: #28283e;  /* Fundo do chat principal */
+    --text-color: #f0f0f5;    /* Cor do texto claro */
+    --highlight-blue: #00bcd4; /* Azul ciano para destaque */
+    --highlight-purple: #9c27b0; /* Roxo para a IA */
+    --user-bubble: #3f51b5;   /* Azul do usuário */
+    --system-bubble: #5c3b9b; /* Roxo escuro da IA */
+    --history-bg: #1c1c2a;    /* Fundo lateral mais escuro */
+    
+    /* Variáveis de Transparência */
+    --transparent-level: 0.7; /* 70% de opacidade */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-dark); 
+    color: var(--text-color);
+    
+    background-image: url('fundo.jpeg.jpeg'); /* Ou 'fundo.png' se o nome for esse */
+    
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+}
+
+.chat-container {
+    display: flex;
+    flex-wrap: wrap; 
+    
+    /* 1. AJUSTE DE LAYOUT: Fundo mais transparente para ver o fundo de trás */
+    background: rgba(40, 40, 62, var(--transparent-level)); 
+    
+    border-radius: 20px;
+    box-shadow: 
+        10px 10px 20px rgba(0, 0, 0, 0.4), 
+        -5px -5px 15px rgba(255, 255, 255, 0.05); 
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh; 
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+    width: 100%;
+    /* Mantém a opacidade total no H1 para leitura */
+    background-color: var(--highlight-purple);
+    color: white;
+    font-size: 1.8em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px var(--highlight-blue);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 2px solid var(--highlight-blue);
+}
+
+/* ------------------------------------- */
+/* SEÇÃO LATERAL DO HISTÓRICO */
+/* ------------------------------------- */
+
+.history-sidebar {
+    width: 250px;
+    padding: 20px;
+    
+    /* Ajuste de Transparência no Sidebar */
+    background-color: rgba(28, 28, 42, var(--transparent-level)); 
+    
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 20px;
+    height: calc(100% - 70px); 
+}
+
+/* ... (Resto do Histórico - Sem Alterações) ... */
+
+/* ------------------------------------- */
+/* SEÇÃO PRINCIPAL DO CHAT */
+/* ------------------------------------- */
+
+.main-chat {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+    height: calc(100% - 70px);
+}
+
+.chat-box {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto; 
+    
+    /* Ajuste de Transparência na Caixa de Mensagens */
+    background-color: rgba(40, 40, 62, var(--transparent-level)); 
+}
+
+/* ... (Estilo das Mensagens - Sem Alterações) ... */
+/* ... (Indicador de Digitação - Sem Alterações) ... */
+
+/* ------------------------------------- */
+/* ÁREA DE INPUT */
+/* ------------------------------------- */
+
+.input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* 2. AJUSTE: Fundo da Área de Input mais transparente */
+    background-color: rgba(28, 28, 42, var(--transparent-level)); 
+}
+
+#userInput {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: none; 
+    border-radius: 25px;
+    margin-right: 15px;
+    font-size: 1em;
+    
+    /* 3. AJUSTE: O campo de input em si mais transparente */
+    background-color: rgba(56, 56, 80, 0.9); /* Um pouco menos transparente para facilitar a digitação */
+    
+    color: var(--text-color);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5); 
+    transition: background-color 0.3s;
+}
+/* ... (Resto do Input - Sem Alterações) ... */
