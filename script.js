@@ -2,7 +2,7 @@
 // 🔑 CONFIGURAÇÃO DA CHAVE DA API (GOOGLE GEMINI)
 // CHAVE ATUALIZADA: Nova chave Gemini inserida.
 // ===============================================
-const GEMINI_API_KEY = "AIzaSyAl85x6wSFSBu86Q6RU1zWBuNUsf1iRt8k"; 
+const GEMINI_API_KEY = "AIzaSyAwssFuT_fqSfa7Gwi_E_JKI7x4wdEexxI"; 
 const GEMINI_MODEL = "gemini-2.5-flash"; 
 
 // Variáveis DOM
@@ -172,4 +172,5 @@ updateHistorySidebar();
 
 if (conversationHistory.length === 0 && chatBox.children.length < 2) {
     appendMessage("system", "Bem-vindo(a) à Marina Chat IA! Seu ambiente de conversa com o Google Gemini. Como posso ajudar você hoje?");
+
 }
