@@ -174,3 +174,4 @@ if (conversationHistory.length === 0 && chatBox.children.length < 2) {
     appendMessage("system", "Bem-vindo(a) à Marina Chat IA! Seu ambiente de conversa com o Google Gemini. Como posso ajudar você hoje?");
 
 }
+
